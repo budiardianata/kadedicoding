@@ -24,7 +24,6 @@ class LigaAdapter(private val ligas :List<Liga>, private val clickListener: (Lig
         fun bind(liga: Liga, clickListener:(Liga) -> Unit) {
             val name = itemView.find<TextView>(R.id.name)
             val imageView = itemView.find<ImageView>(R.id.image)
-
             name.text = liga.name
             imageView.setImageResource(liga.image)
             itemView.setOnClickListener{
