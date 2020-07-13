@@ -5,20 +5,20 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.pdk.dicoding.kade.R
-import com.pdk.dicoding.kade.model.Liga
+import com.pdk.dicoding.kade.model.League
 import org.jetbrains.anko.*
 import org.jetbrains.anko.constraint.layout.ConstraintSetBuilder
 import org.jetbrains.anko.constraint.layout.applyConstraintSet
 import org.jetbrains.anko.constraint.layout.constraintLayout
 
 class DetailActivity : AppCompatActivity() {
-    lateinit var liga: Liga
+    lateinit var league: League
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        liga = intent.getParcelableExtra("data") as Liga
+        league = intent.getParcelableExtra("data") as League
         DetailActivityUI().setContentView(this)
-        supportActionBar?.title = liga.name
+        supportActionBar?.title = league.name
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
@@ -31,13 +31,13 @@ class DetailActivity : AppCompatActivity() {
                     lparams(width = matchParent, height = matchParent)
                     imageView {
                         id = R.id.image
-                        setImageResource(liga.image)
+                        setImageResource(league.image)
                     }.lparams {
                         width = dip(150)
                         height = dip(150)
                         topMargin = dip(10)
                     }
-                    textView(liga.name) {
+                    textView(league.name) {
                         id = R.id.name
                         typeface = Typeface.DEFAULT_BOLD
                     }.lparams {
@@ -46,7 +46,7 @@ class DetailActivity : AppCompatActivity() {
                         bottomMargin = dip(4)
                     }
 
-                    textView(liga.description) {
+                    textView(league.description) {
                         id = R.id.description
                         typeface = Typeface.DEFAULT_BOLD
                     }.lparams {

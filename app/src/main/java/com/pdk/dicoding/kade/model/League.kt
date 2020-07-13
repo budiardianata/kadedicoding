@@ -8,7 +8,7 @@ import kotlinx.android.parcel.Parcelize
  * Email: budiardianata@windowslive.com
  */
 @Parcelize
-class Liga ( val id: Int?,
-             val name: String?,
-             val description: String?,
-             val image: Int):Parcelable
+class League (val id: Int?,
+              val name: String?,
+              val description: String?,
+              val image: Int):Parcelable
