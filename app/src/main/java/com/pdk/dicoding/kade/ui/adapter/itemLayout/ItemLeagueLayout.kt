@@ -21,7 +21,7 @@ import org.jetbrains.anko.constraint.layout.constraintLayout
  * Project: KADE
  * Email: budiardianata@windowslive.com
  */
-class ItemLigaLayout : AnkoComponent<ViewGroup> {
+class ItemLeagueLayout : AnkoComponent<ViewGroup> {
     override fun createView(ui: AnkoContext<ViewGroup>): View = with(ui) {
         constraintLayout {
             lparams(width = matchParent, height = wrapContent)
